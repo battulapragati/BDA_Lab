@@ -54,4 +54,5 @@ db.Customers.aggregate([
 db.Customers.drop()
 
 mongoexport --db College --collection Customers --type=csv --out C:\Users\Pragati\Desktop\Customer.csv --fields cust_id,Acc_Bal,Acc_Type
+
 mongoimport --db College --collection Customers --type=csv --file C:\Users\Pragati\Desktop\Student.csv --fields cust_id,Acc_Bal,Acc_Type
