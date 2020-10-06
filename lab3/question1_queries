@@ -38,7 +38,11 @@ db.Student.insert(
         
         
 db.Student.update({_id:4 },{ $set: { "e_mail": "bhavika@gmail.com" }})
+db.Student.update({RollNo:10 },{ $set: { "e_mail": "bhavika@gmail.com" }})
+
 db.Student.update({_id:2},{ $set: {Name: "FEM" }})
+db.Student.update({RollNo:11,Name:"ABC" },{ $set: {Name: "FEM" })
+
 mongoexport --db College --collection Student --type=csv --out C:\Users\Pragati\Desktop\Student.csv --fields Name,RollNo,Age,e_mail,contact_no
 db.Student.drop()
 mongoimport --db College --collection Students --type=csv --file C:\Users\Pragati\Desktop\Student.csv --fields Name,RollNo,Age,e_mail,contact_no
