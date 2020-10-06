@@ -1,0 +1,57 @@
+db.Customers.insert(
+	{
+           cust_id:1,
+	   Acc_Bal: 10000,
+	   Acc_Type: "Savings"
+	})
+db.Customers.insert(
+	{
+           cust_id:2,
+	   Acc_Bal: 100,
+	   Acc_Type: "Current"
+	})
+db.Customers.insert(
+	{
+           cust_id:3,
+	   Acc_Bal: 5000,
+	   Acc_Type: "Current"
+	})
+db.Customers.insert(
+	{
+           cust_id:3,
+	   Acc_Bal: 50000,
+	   Acc_Type: "Current"
+	})
+db.Customers.insert(
+	{
+           cust_id:4,
+	   Acc_Bal: 15000,
+	   Acc_Type: "Savings"
+	})
+db.Customers.insert(
+	{
+           cust_id:5,
+	   Acc_Bal: 150,
+	   Acc_Type: "Savings"
+	})
+db.Customers.insert(
+	{
+           cust_id:5,
+	   Acc_Bal: 1150,
+	   Acc_Type: "Savings"
+	})
+        
+db.Customers.find( { Acc_Type: "Savings", Acc_Bal: { $gt:1200} } )
+db.Customers.aggregate([
+    {
+        $group: {
+            _id: "$cust_id",
+            min_bal: {$min: "$Acc_Bal"},
+            max_bal: {$max: "$Acc_Bal"}
+        }
+    }
+])
+db.Customers.drop()
+
+mongoexport --db College --collection Customers --type=csv --out C:\Users\Pragati\Desktop\Customer.csv --fields cust_id,Acc_Bal,Acc_Type
+mongoimport --db College --collection Customers --type=csv --file C:\Users\Pragati\Desktop\Student.csv --fields cust_id,Acc_Bal,Acc_Type
