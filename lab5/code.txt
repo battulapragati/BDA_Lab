@@ -1,0 +1,27 @@
+1. Create  a keyspace by name Student:
+cqlsh> CREATE KEYSPACE Student with replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
+
+
+2. Create a column family by name Student-Info with attributes Student_Id Primary Key, Stude_Name, Date_of_Joining, Semester, Dept_Name:
+
+cqlsh> USE student;
+cqlsh:student> CREATE COLUMNFAMILY Student_Info(
+           ... Student_Id int primary key,
+           ... Student_Name text,
+           ... Date_Of_Joining text,
+           ... Semester int,
+           ... Dept_Name text
+           ... );
+3. Insert the values into the table in batch:
+
+>cqlsh:student> BEGIN BATCH
+           ... INSERT INTO student_info(student_id, date_of_joining, dept_name, semester, student_name) values(101, '08-08-2017', 'CSE', 7, 'Pragati');
+           ... INSERT INTO student_info(student_id, date_of_joining, dept_name, semester, student_name) values(102, '15-08-2018', 'CSE', 5, 'Rahul');
+           ... INSERT INTO student_info(student_id, date_of_joining, dept_name, semester, student_name) values(103, '10-08-2017', 'CSE', 7, 'Avinash');
+           ... APPLY BATCH;
+cqlsh:student> select * from Student_Info;
+
+4. Update Student name  of Student_Id 101:
+
+cqlsh:student> UPDATE student_info set student_name = 'Pragati Battula' where student_id = 103;
+cqlsh:student> select * from Student_Info;
