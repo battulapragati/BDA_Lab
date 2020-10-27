@@ -21,7 +21,7 @@ cqlsh:student> CREATE COLUMNFAMILY Student_Info(
            ... APPLY BATCH;
 cqlsh:student> select * from Student_Info;
 
-4. Update Student name  of Student_Id 101:
+4. Update Student name  of Student_Id 103:
 
 cqlsh:student> UPDATE student_info set student_name = 'Pragati Battula' where student_id = 103;
 cqlsh:student> select * from Student_Info;
