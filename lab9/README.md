@@ -1,4 +1,6 @@
 **Hive Employee Program**
+
+
   *1. Create an external table named with the following attributes -> Empl_ID ->Emp_Name -> Designation -> Salary*
     CREATE DATABASE IF NOT EXISTS lab9 COMMENT 'employee program' WITH DBPROPERTIES ('creator'='CHANDANA');
     SHOW DATABASES;
