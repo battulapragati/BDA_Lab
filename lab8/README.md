@@ -22,3 +22,6 @@
 10.hadoop jar '/home/chandana/Desktop/Hadoop/averageTemperature/averageTemperature.jar' AverageDriver /AverageTemperature/Input /AverageTemperature/Output
 
 11.hadoop fs -cat /AverageTemperature/Output/part-r-00000
+
+![1](https://user-images.githubusercontent.com/53899365/102691733-9f1ad300-4234-11eb-9998-36bb66943c48.jpg)
+
