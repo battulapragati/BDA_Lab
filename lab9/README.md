@@ -46,3 +46,13 @@
   
   
       SELECT a.EmpID,a.EmpName,a.Designation,a.Salary,b.DeptName FROM Employee a JOIN Department b ON a.DeptID=b.DeptId;
+      
+  **Outputs**
+  
+![1](https://user-images.githubusercontent.com/53899365/102691398-421e1d80-4232-11eb-8eba-ba9a2e2feb4c.jpg)
+![2](https://user-images.githubusercontent.com/53899365/102691399-434f4a80-4232-11eb-90b7-410c9eaf0da5.jpg)
+![3](https://user-images.githubusercontent.com/53899365/102691401-45190e00-4232-11eb-83ed-9a9ec47e488e.jpg)
+![4](https://user-images.githubusercontent.com/53899365/102691404-464a3b00-4232-11eb-8860-d810a98e785a.jpg)
+![5](https://user-images.githubusercontent.com/53899365/102691406-4813fe80-4232-11eb-8371-799ee979473c.jpg)
+![6](https://user-images.githubusercontent.com/53899365/102691407-49ddc200-4232-11eb-9199-914539a148f6.jpg)
+
