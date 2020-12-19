@@ -1,0 +1,1 @@
+##Hadoop Average temperature program
