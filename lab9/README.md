@@ -2,14 +2,14 @@
 
 
   *1. Create an external table named with the following attributes -> Empl_ID ->Emp_Name -> Designation -> Salary*
-    CREATE DATABASE IF NOT EXISTS lab9 COMMENT 'employee program' WITH DBPROPERTIES ('creator'='CHANDANA');
+    CREATE DATABASE IF NOT EXISTS lab9 COMMENT 'employee program' WITH DBPROPERTIES ('creator'='PRAGATI');
     SHOW DATABASES;
     DESCRIBE DATABASE lab9;
     USE lab9;
     CREATE EXTERNAL TABLE IF NOT EXISTS Employee(EmpID INT,EmpName STRING,Designation STRING,Salary FLOAT) ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t';
     
   *2. Load data into table from a given file*
-     LOAD DATA LOCAL INPATH '/home/chandana/Desktop/employeeInput.txt' OVERWRITE INTO TABLE Employee;
+     LOAD DATA LOCAL INPATH '/home/pragati/Desktop/employeeInput.txt' OVERWRITE INTO TABLE Employee;
      SELECT * FROM Employee;
      
   *3. Create a view to Generate a query to retrieve the employee details who earn a salary of more than Rs 30000.*
@@ -27,7 +27,7 @@
       
   *6.Create another table Department with attributes -> Dept_Id ->Dept_name ->Emp_Id*
       CREATE EXTERNAL TABLE IF NOT EXISTS Department(DeptId INT,DeptName STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t';
-      LOAD DATA LOCAL INPATH '/home/chandana/Desktop/DepartmentInput.txt' OVERWRITE INTO TABLE Department;
+      LOAD DATA LOCAL INPATH '/home/pragati/Desktop/DepartmentInput.txt' OVERWRITE INTO TABLE Department;
       SELECT * FROM Department; 
       
   *7. Display the cumulative details of each employee along with department details*
