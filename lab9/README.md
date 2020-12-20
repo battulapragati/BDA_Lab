@@ -26,7 +26,7 @@
   
   
       ALTER TABLE Employee ADD COLUMNS(DeptID INT);
-      LOAD DATA LOCAL INPATH '/home/chandana/Desktop/employeeInputAltered.txt' OVERWRITE INTO TABLE Employee;
+      LOAD DATA LOCAL INPATH '/home/pragati/Desktop/employeeInputAltered.txt' OVERWRITE INTO TABLE Employee;
       SELECT * FROM Employee;
       SELECT * FROM Employee ORDER BY DeptID;
       
