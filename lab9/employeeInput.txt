@@ -1,0 +1,8 @@
+1	John	Manager	50000
+2	Kelly	Sr. Manager	60000
+3	Harry	Software Engineer	45000
+4	Kedrik	Software Engineer	30000
+5	Tom	Test Engineer	20000
+6	Ubern	Test Engineer	20000
+7	Rohan	HR manager	25000
+8	Joana	Software Engineer	23000
